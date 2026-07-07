@@ -3,7 +3,7 @@
 
 const LOCAUX = {
   "bureaux-kaly-r1-batiment-nord": {
-    nom: "Bureaux Kaly R+1 - Batiment Nord",
+    nom: "Bureaux Kaly R+1 - Bureau 1",
     site: "DALKIA",
     intervention: "https://externe.optimatracabilite.gsf.fr/public/pleaze/418?token=8b0227a578fba9afb075b810b745d033",
     planning: "pdf/planning-bureaux-kaly-r1-batiment-nord.pdf"
