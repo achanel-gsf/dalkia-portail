@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GSF - Portail intervention et planning</title>
+  <meta name="description" content="Portail GSF pour demander une intervention et consulter le planning d'intervention par local.">
+  <style>
+    :root{
+      --blue:#005a9c;
+      --blue2:#0078d4;
+      --green:#238636;
+      --text:#24313d;
+      --muted:#637282;
+      --bg:#f4f7fb;
+      --card:#ffffff;
+      --border:#dde6ef;
+      --danger:#b42318;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      min-height:100vh;
+      font-family:Arial, Helvetica, sans-serif;
+      background:linear-gradient(180deg,#eef5fb 0%, var(--bg) 100%);
+      color:var(--text);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:22px;
+    }
+    .card{
+      width:100%;
+      max-width:680px;
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:18px;
+      box-shadow:0 14px 40px rgba(20,47,79,.14);
+      overflow:hidden;
+    }
+    .header{
+      background:var(--blue);
+      color:white;
+      padding:28px 28px 24px;
+      text-align:center;
+    }
+    .header .kicker{
+      font-size:13px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      opacity:.9;
+      margin-bottom:8px;
+    }
+    h1{
+      margin:0;
+      font-size:28px;
+      line-height:1.2;
+    }
+    .content{
+      padding:28px;
+      text-align:center;
+    }
+    .local-box{
+      background:#f7fafc;
+      border:1px solid var(--border);
+      border-radius:13px;
+      padding:14px;
+      margin-bottom:22px;
+    }
+    .label{
+      color:var(--muted);
+      font-size:13px;
+      margin-bottom:5px;
+    }
+    .local-name{
+      font-weight:700;
+      font-size:20px;
+      color:var(--text);
+    }
+    .btn{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      width:100%;
+      text-decoration:none;
+      color:white;
+      padding:19px 20px;
+      margin:14px 0;
+      border-radius:13px;
+      font-size:18px;
+      font-weight:700;
+      transition:transform .1s ease, opacity .1s ease;
+      text-align:left;
+    }
+    .btn:hover{opacity:.94; transform:translateY(-1px)}
+    .btn span.icon{
+      display:inline-flex;
+      width:40px;
+      height:40px;
+      border-radius:50%;
+      align-items:center;
+      justify-content:center;
+      background:rgba(255,255,255,.22);
+      flex:0 0 auto;
+      font-size:20px;
+    }
+    .intervention{background:var(--blue2)}
+    .planning{background:var(--green)}
+    .help{
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.45;
+      margin-top:18px;
+    }
+    .error{
+      display:none;
+      border:1px solid #f1b8b2;
+      color:var(--danger);
+      background:#fff4f2;
+      border-radius:12px;
+      padding:15px;
+      text-align:left;
+      line-height:1.45;
+      margin-bottom:18px;
+    }
+    .footer{
+      border-top:1px solid var(--border);
+      padding:14px 20px;
+      font-size:12px;
+      text-align:center;
+      color:var(--muted);
+      background:#fbfdff;
+    }
+    @media (max-width:480px){
+      h1{font-size:23px}
+      .content{padding:22px}
+      .btn{font-size:16px; padding:17px 16px}
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <section class="header">
+      <div class="kicker" id="siteName">GSF</div>
+      <h1>Intervention et planning</h1>
+    </section>
+
+    <section class="content">
+      <div id="error" class="error"></div>
+
+      <div class="local-box">
+        <div class="label">Local concerne</div>
+        <div class="local-name" id="localName">Chargement...</div>
+      </div>
+
+      <a id="interventionBtn" class="btn intervention" href="#" target="_blank" rel="noopener">
+        <span class="icon">!</span>
+        <span>Demander une intervention</span>
+      </a>
+
+      <a id="planningBtn" class="btn planning" href="#" target="_blank" rel="noopener">
+        <span class="icon">i</span>
+        <span>Consulter le planning d'intervention</span>
+      </a>
+
+      <div class="help">
+        Cette page affiche automatiquement les bons liens selon le QR code scanne dans le local.
+      </div>
+    </section>
+
+    <div class="footer">Portail GSF - Acces rapide par local</div>
+  </main>
+
+  <script src="locaux.js"></script>
+  <script>
+    function afficherErreur(message){
+      const box = document.getElementById('error');
+      box.style.display = 'block';
+      box.innerHTML = message;
+    }
+
+    const params = new URLSearchParams(window.location.search);
+    const codeLocal = params.get('local');
+    const local = codeLocal ? LOCAUX[codeLocal] : null;
+
+    if(!codeLocal){
+      document.getElementById('localName').textContent = 'Local non precise';
+      document.getElementById('interventionBtn').style.display = 'none';
+      document.getElementById('planningBtn').style.display = 'none';
+      afficherErreur("Aucun local n'est indique dans l'URL.<br>Exemple : ajoutez <strong>?local=bureaux-kaly-r1-batiment-nord</strong> a la fin de l'adresse.");
+    } else if(!local){
+      document.getElementById('localName').textContent = codeLocal;
+      document.getElementById('interventionBtn').style.display = 'none';
+      document.getElementById('planningBtn').style.display = 'none';
+      afficherErreur("Le local <strong>" + codeLocal + "</strong> n'est pas encore configure dans le fichier <strong>locaux.js</strong>.");
+    } else {
+      document.getElementById('siteName').textContent = local.site || 'GSF';
+      document.getElementById('localName').textContent = local.nom;
+      document.getElementById('interventionBtn').href = local.intervention;
+      document.getElementById('planningBtn').href = local.planning;
+      document.title = (local.site || 'GSF') + ' - ' + local.nom;
+    }
+  </script>
+</body>
+</html>
