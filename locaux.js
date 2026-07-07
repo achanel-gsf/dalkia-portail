@@ -2,7 +2,7 @@
 // Pour ajouter un local : dupliquez un bloc, modifiez le code, le nom, l'URL d'intervention et le PDF.
 
 const LOCAUX = {
-  "bureaux-kaly-r1-batiment-nord": {
+  "bureaux-kaly-r1-bureau1": {
     nom: "Bureaux Kaly R+1 - Bureau 1",
     site: "DALKIA",
     intervention: "https://externe.optimatracabilite.gsf.fr/public/pleaze/418?token=8b0227a578fba9afb075b810b745d033",
