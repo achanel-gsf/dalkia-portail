@@ -44,6 +44,22 @@
       padding:28px 28px 24px;
       text-align:center;
     }
+    .logos{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      gap:30px;
+      margin-bottom:20px;
+    }
+
+    .logos img{
+      height:60px;
+      max-width:180px;
+      object-fit:contain;
+      background:white;
+      padding:8px;
+      border-radius:8px;
+    }
     .header .kicker{
       font-size:13px;
       letter-spacing:.08em;
@@ -141,9 +157,17 @@
 <body>
   <main class="card">
     <section class="header">
-      <div class="kicker" id="siteName">GSF</div>
-      <h1>Intervention et planning</h1>
-    </section>
+
+  <div class="logos">
+      <img src="logos/GSF.jpg" alt="GSF">
+      <img src="logos/dalkia.png" alt="Dalkia">
+  </div>
+
+  <div class="kicker" id="siteName">GSF - DALKIA</div>
+
+  <h1>Intervention et planning</h1>
+
+</section>
 
     <section class="content">
       <div id="error" class="error"></div>
