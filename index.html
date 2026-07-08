@@ -183,9 +183,9 @@
         <span>Demander une intervention</span>
       </a>
 
-      <a id="documentsBtn" class="btn planning" href="#" target="_blank" rel="noopener">
+      <a id="planningBtn" class="btn planning" href="#" target="_blank" rel="noopener">
         <span class="icon">i</span>
-        <span>Consulter microzoning et cahier des charges</span>
+        <span>Consulter le planning d'intervention</span>
       </a>
 
       <div class="help">
@@ -222,7 +222,7 @@
       document.getElementById('siteName').textContent = local.site || 'GSF';
       document.getElementById('localName').textContent = local.nom;
       document.getElementById('interventionBtn').href = local.intervention;
-      document.getElementById('documentsBtn').href = local.documents;
+      document.getElementById('planningBtn').href = local.planning;
       document.title = (local.site || 'GSF') + ' - ' + local.nom;
     }
   </script>
