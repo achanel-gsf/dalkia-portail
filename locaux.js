@@ -6,7 +6,7 @@ const LOCAUX = {
     nom: "Kaly R+1 - Bureau 1",
     site: "DALKIA",
     intervention: "https://externe.optimatracabilite.gsf.fr/public/pleaze/418?token=8b0227a578fba9afb075b810b745d033",
-    documents: "documents/kaly-r1-bureau1.html"
+    planning: "pdf/planning-bureaux-kaly-r1-batiment-nord.pdf"
   },
 
   // Exemples a adapter lorsque vous aurez d'autres locaux :
