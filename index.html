@@ -184,11 +184,6 @@
         <span>Demander une intervention</span>
       </a>
 
-      <a id="microzoningBtn" class="btn microzoning" href="#" target="_blank">
-        <span class="icon">📍</span>
-        <span>Consulter le microzoning</span>
-      </a>
-
       <a id="planningBtn" class="btn planning" href="#" target="_blank" rel="noopener">
         <span class="icon">📋</span>
         <span>Consulter le cahier des charges</span>
@@ -217,20 +212,17 @@
     if(!codeLocal){
       document.getElementById('localName').textContent = 'Local non precise';
       document.getElementById('interventionBtn').style.display = 'none';
-      document.getElementById('microzoningBtn').style.display = 'none';
       document.getElementById('planningBtn').style.display = 'none';
       afficherErreur("Aucun local n'est indique dans l'URL.<br>Exemple : ajoutez <strong>?local=bureaux-kaly-r1-batiment-nord</strong> a la fin de l'adresse.");
     } else if(!local){
       document.getElementById('localName').textContent = codeLocal;
       document.getElementById('interventionBtn').style.display = 'none';
-      document.getElementById('microzoningBtn').style.display = 'none';
       document.getElementById('planningBtn').style.display = 'none';
       afficherErreur("Le local <strong>" + codeLocal + "</strong> n'est pas encore configure dans le fichier <strong>locaux.js</strong>.");
     } else {
       document.getElementById('siteName').textContent = local.site || 'GSF';
       document.getElementById('localName').textContent = local.nom;
       document.getElementById('interventionBtn').href = local.intervention;
-      document.getElementById('microzoningBtn').href = local.microzoning;
       document.getElementById('planningBtn').href = local.planning;
       document.title = (local.site || 'GSF') + ' - ' + local.nom;
     }
