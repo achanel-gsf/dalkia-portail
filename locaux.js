@@ -6,7 +6,6 @@ const LOCAUX = {
     nom: "Kaly R+1 - Bureau 1",
     site: "DALKIA",
     intervention: "https://externe.optimatracabilite.gsf.fr/public/pleaze/418?token=8b0227a578fba9afb075b810b745d033",
-    microzoning: "pdf/microzoning-r1.pdf",
     planning: "pdf/Interventions_bureaux_reunion_r1.pdf"
   },
 
