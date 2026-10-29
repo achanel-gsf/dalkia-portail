@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Portail Dalkia - Kaly</title>
 
@@ -19,157 +17,124 @@
         body {
             margin: 0;
             padding: 0;
-            min-height: 100vh;
-
             font-family: Arial, Helvetica, sans-serif;
-
             background: #f4f6f8;
-            color: #252525;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            color: #333;
         }
 
+        /* ================================
+           PAGE
+        ================================= */
 
-        /* =========================
-           CONTENEUR PRINCIPAL
-        ========================= */
+        .page {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
 
-        .container {
-            width: 100%;
-            max-width: 500px;
+        /* ================================
+           EN-TETE
+        ================================= */
 
-            margin: 20px;
-            padding: 30px 25px;
-
+        header {
             background: white;
+            padding: 20px;
+            border-bottom: 1px solid #e5e5e5;
+        }
 
+        .logos {
+            max-width: 650px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .logo {
+            max-height: 60px;
+            max-width: 160px;
+            object-fit: contain;
+        }
+
+        /* ================================
+           CONTENU
+        ================================= */
+
+        main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 35px 20px;
+        }
+
+        .card {
+            width: 100%;
+            max-width: 520px;
+            background: white;
             border-radius: 18px;
-
+            padding: 35px 30px;
             box-shadow:
-                0 5px 25px rgba(0, 0, 0, 0.10);
+                0 8px 25px rgba(0, 0, 0, 0.08);
 
             text-align: center;
         }
 
+        /* ================================
+           LOCAL
+        ================================= */
 
-        /* =========================
-           LOGOS
-        ========================= */
+        .site {
+            color: #777;
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
 
-        .logos {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        h1 {
+            color: #d20a2e;
+            font-size: 28px;
+            line-height: 1.25;
+            margin: 0 0 8px 0;
+        }
 
-            gap: 25px;
-
+        .etage {
+            font-size: 19px;
+            color: #555;
             margin-bottom: 30px;
         }
 
-        .logos img {
-            max-width: 140px;
-            max-height: 65px;
-            object-fit: contain;
-        }
-
-
-        /* =========================
-           SITE
-        ========================= */
-
-        .site {
-            color: #555;
-            font-size: 15px;
-
-            margin-bottom: 8px;
-
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-
-        /* =========================
-           NOM DU LOCAL
-        ========================= */
-
-        h1 {
-            margin: 0;
-
-            font-size: 27px;
-            line-height: 1.2;
-
-            color: #d71920;
-        }
-
-
-        /* =========================
-           ETAGE
-        ========================= */
-
-        .etage {
-            margin-top: 8px;
-
-            font-size: 18px;
-            font-weight: bold;
-
-            color: #555;
-        }
-
-
-        /* =========================
-           SEPARATEUR
-        ========================= */
-
         .separator {
-            width: 60px;
-            height: 4px;
-
-            background: #d71920;
-
-            border-radius: 10px;
-
-            margin: 22px auto;
+            height: 1px;
+            background: #eeeeee;
+            margin: 25px 0 30px 0;
         }
 
-
-        /* =========================
-           TEXTE
-        ========================= */
-
-        .description {
-            font-size: 16px;
-            line-height: 1.5;
-
-            color: #555;
-
-            margin-bottom: 25px;
-        }
-
-
-        /* =========================
+        /* ================================
            BOUTONS
-        ========================= */
+        ================================= */
 
-        .button {
+        .actions {
             display: flex;
-            align-items: center;
-            justify-content: center;
+            flex-direction: column;
+            gap: 15px;
+        }
 
+        .btn {
             width: 100%;
-
-            min-height: 65px;
-
-            margin-top: 15px;
-
-            padding: 15px 20px;
-
-            border-radius: 12px;
-
+            padding: 17px 20px;
+            border-radius: 10px;
             text-decoration: none;
 
-            font-size: 17px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+
+            font-size: 16px;
             font-weight: bold;
 
             transition:
@@ -177,108 +142,116 @@
                 box-shadow 0.15s ease;
         }
 
-        .button:active {
-            transform: scale(0.98);
+        .btn:hover {
+            transform: translateY(-2px);
         }
 
+        /* OPTIMA */
 
-        /* =========================
-           BOUTON INTERVENTION
-        ========================= */
-
-        .intervention {
-            background: #d71920;
+        .btn-intervention {
+            background: #d20a2e;
             color: white;
 
             box-shadow:
-                0 4px 12px rgba(215, 25, 32, 0.25);
+                0 4px 12px rgba(210, 10, 46, 0.20);
         }
 
-
-        /* =========================
-           BOUTON PLANNING
-        ========================= */
-
-        .planning {
-            background: #ffffff;
-            color: #d71920;
-
-            border: 2px solid #d71920;
+        .btn-intervention:hover {
+            box-shadow:
+                0 7px 16px rgba(210, 10, 46, 0.28);
         }
 
+        /* PLANNING */
 
-        /* =========================
-           ICONES
-        ========================= */
-
-        .icon {
-            font-size: 25px;
-
-            margin-right: 12px;
+        .btn-planning {
+            border: 2px solid #d20a2e;
+            color: #d20a2e;
+            background: white;
         }
 
-
-        /* =========================
-           PIED DE PAGE
-        ========================= */
-
-        .footer {
-            margin-top: 30px;
-
-            padding-top: 18px;
-
-            border-top: 1px solid #eeeeee;
-
-            font-size: 12px;
-            color: #999;
+        .btn-planning:hover {
+            background: #fff5f6;
         }
 
-
-        /* =========================
-           ERREUR
-        ========================= */
+        /* ================================
+           MESSAGE ERREUR
+        ================================= */
 
         .error {
             display: none;
-
-            margin-top: 20px;
-
-            padding: 20px;
-
-            background: #fff3f3;
-
-            border: 1px solid #f0b5b5;
-            border-radius: 10px;
-
-            color: #a40000;
-
-            font-size: 15px;
         }
 
+        .error h1 {
+            margin-bottom: 15px;
+        }
 
-        /* =========================
+        .error p {
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .local-code {
+            display: inline-block;
+
+            margin-top: 10px;
+            padding: 7px 10px;
+
+            background: #f1f1f1;
+            border-radius: 6px;
+
+            font-family: monospace;
+            font-size: 13px;
+
+            word-break: break-all;
+        }
+
+        /* ================================
+           PIED DE PAGE
+        ================================= */
+
+        footer {
+            padding: 20px;
+            text-align: center;
+            color: #888;
+            font-size: 12px;
+        }
+
+        /* ================================
            MOBILE
-        ========================= */
+        ================================= */
 
-        @media (max-width: 450px) {
+        @media (max-width: 600px) {
 
-            .container {
-                margin: 12px;
-                padding: 25px 20px;
+            header {
+                padding: 16px;
             }
 
-            .logos img {
-                max-width: 115px;
-                max-height: 55px;
+            .logos {
+                gap: 20px;
+            }
+
+            .logo {
+                max-width: 120px;
+                max-height: 50px;
+            }
+
+            main {
+                padding: 25px 15px;
+            }
+
+            .card {
+                padding: 30px 20px;
+                border-radius: 15px;
             }
 
             h1 {
-                font-size: 24px;
+                font-size: 25px;
             }
 
-            .button {
-                font-size: 16px;
+            .etage {
+                font-size: 18px;
             }
+
         }
 
     </style>
@@ -288,256 +261,275 @@
 
 <body>
 
-    <div class="container">
+<div class="page">
 
-        <!-- =========================
-             LOGOS
-        ========================== -->
+    <!-- ===============================
+         LOGOS
+    ================================ -->
+
+    <header>
 
         <div class="logos">
 
             <img
                 src="logos/gsf.png"
-                alt="Logo GSF"
+                alt="GSF"
+                class="logo"
             >
 
             <img
                 src="logos/dalkia.png"
-                alt="Logo Dalkia"
+                alt="Dalkia"
+                class="logo"
             >
 
         </div>
 
+    </header>
 
-        <!-- =========================
-             CONTENU DU LOCAL
-        ========================== -->
 
-        <div id="contenu">
+    <!-- ===============================
+         CONTENU
+    ================================ -->
+
+    <main>
+
+        <!-- LOCAL TROUVE -->
+
+        <div class="card" id="localCard">
 
             <div class="site">
-                Dalkia • Kaly
+                KALY
             </div>
 
-
-            <h1 id="nomLocal">
+            <h1 id="localNom">
                 Chargement...
             </h1>
 
-
             <div
                 class="etage"
-                id="etageLocal"
-            ></div>
-
+                id="localEtage">
+            </div>
 
             <div class="separator"></div>
 
 
-            <div class="description">
-                Sélectionnez l'action souhaitée.
+            <div class="actions">
+
+                <!-- OPTIMA -->
+
+                <a
+                    id="interventionBtn"
+                    class="btn btn-intervention"
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    <span>🔧</span>
+
+                    <span>
+                        Demander une intervention
+                    </span>
+
+                </a>
+
+
+                <!-- PLANNING -->
+
+                <a
+                    id="planningBtn"
+                    class="btn btn-planning"
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    <span>📅</span>
+
+                    <span>
+                        Consulter le planning d'intervention
+                    </span>
+
+                </a>
+
             </div>
 
-
-            <!-- INTERVENTION -->
-
-            <a
-                id="btnIntervention"
-                class="button intervention"
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-
-                <span class="icon">
-                    🔧
-                </span>
-
-                <span>
-                    Demander une intervention
-                </span>
-
-            </a>
-
-
-            <!-- PLANNING -->
-
-            <a
-                id="btnPlanning"
-                class="button planning"
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-
-                <span class="icon">
-                    📅
-                </span>
-
-                <span>
-                    Consulter le planning d'intervention
-                </span>
-
-            </a>
-
         </div>
 
 
-        <!-- =========================
-             MESSAGE D'ERREUR
-        ========================== -->
+        <!-- LOCAL INCONNU -->
 
         <div
-            id="erreur"
-            class="error"
+            class="card error"
+            id="errorCard"
         >
 
-            <strong>Local non reconnu</strong>
+            <div class="site">
+                KALY
+            </div>
 
-            <br><br>
+            <h1>
+                Local non reconnu
+            </h1>
 
-            Le QR code utilisé ne correspond pas à un local configuré.
+            <p>
+                Le QR code utilisé ne correspond pas
+                à un local enregistré.
+            </p>
+
+            <p>
+                Identifiant détecté :
+            </p>
+
+            <div
+                class="local-code"
+                id="errorCode">
+            </div>
 
         </div>
 
-
-        <!-- =========================
-             FOOTER
-        ========================== -->
-
-        <div class="footer">
-
-            Portail d'intervention – Kaly
-
-            <br>
-
-            GSF × Dalkia
-
-        </div>
-
-    </div>
+    </main>
 
 
-    <!-- =========================
-         CONFIGURATION DES LOCAUX
-    ========================== -->
+    <!-- ===============================
+         FOOTER
+    ================================ -->
 
-    <script src="locaux.js"></script>
+    <footer>
+
+        Portail d'intervention Kaly
+
+    </footer>
+
+</div>
 
 
-    <!-- =========================
-         SCRIPT PRINCIPAL
-    ========================== -->
+<!-- ===============================
+     CONFIGURATION DES LOCAUX
+================================ -->
 
-    <script>
+<script src="locaux.js"></script>
+
+
+<script>
+
+    /*
+    ==========================================
+    RECUPERATION DU PARAMETRE DU QR CODE
+    ==========================================
+    Exemple :
+
+    ?local=kaly-r1-sdr-cedre
+    */
+
+    const params =
+        new URLSearchParams(window.location.search);
+
+    const localId =
+        params.get("local");
+
+
+    /*
+    ==========================================
+    ELEMENTS DE LA PAGE
+    ==========================================
+    */
+
+    const localCard =
+        document.getElementById("localCard");
+
+    const errorCard =
+        document.getElementById("errorCard");
+
+    const localNom =
+        document.getElementById("localNom");
+
+    const localEtage =
+        document.getElementById("localEtage");
+
+    const interventionBtn =
+        document.getElementById("interventionBtn");
+
+    const planningBtn =
+        document.getElementById("planningBtn");
+
+    const errorCode =
+        document.getElementById("errorCode");
+
+
+    /*
+    ==========================================
+    RECHERCHE DU LOCAL
+    ==========================================
+    */
+
+    if (
+        localId &&
+        typeof locaux !== "undefined" &&
+        locaux[localId]
+    ) {
+
+        const local =
+            locaux[localId];
+
 
         /*
-        ==========================================
-        RÉCUPÉRATION DU LOCAL DANS L'URL
-        ==========================================
-        Exemple :
-
-        ?local=kaly-r1-sdr-cedre
-
+        --------------------------
+        NOM DU LOCAL
+        --------------------------
         */
 
-        const params =
-            new URLSearchParams(window.location.search);
-
-        const localID =
-            params.get("local");
+        localNom.textContent =
+            local.nom;
 
 
         /*
-        ===================================l =
-            document.getElementById("etageLocal");
+        --------------------------
+        ETAGE
+        --------------------------
+        */
 
-        const btnIntervention =
-            document.getElementById("btnIntervention");
+        localEtage.textContent =
+            local.etage || "";
 
-        const btnPlanning =
-            document.getElementById("btnPlanning");
+
+        /*
+        --------------------------
+        LIEN OPTIMA
+   ------------
+        */
+
+        document.title =
+            local.nom +
+            " - " +
+            local.etage +
+            " | Kaly";
+
+
+    } else {
 
 
         /*
         ==========================================
-        SI LE LOCAL EXISTE
+        QR CODE INCONNU
         ==========================================
         */
 
-        if (local) {
+        localCard.style.display =
+            "none";
 
-            nomLocal.textContent =
-                local.nom;
+        errorCard.style.display =
+            "block";
 
-            etageLocal.textContent =
-                local.etage;
+        errorCode.textContent =
+            localId || "aucun identifiant";
 
+    }
 
-            /*
-            LIEN OPTIMA
-            */
+</script>
 
-            if (local.intervention) {
-
-                btnIntervention.href =
-                    local.intervention;
-
-            } else {
-
-                btnIntervention.style.display =
-                    "none";
-
-            }
-
-
-            /*
-            PLANNING
-            */
-
-            if (local.planning) {
-
-                btnPlanning.href =
-                    local.planning;
-
-            } else {
-
-                btnPlanning.style.display =
-                    "none";
-
-            }
-
-
-            /*
-            TITRE DE L'ONGLET
-            */
-
-            document.title =
-                local.nom +
-                " - " +
-                local.etage +
-                " - Kaly";
-
-        }
-
-
-        /*
-        ==========================================
-        SI LE LOCAL N'EXISTE PAS
-        ==========================================
-        */
-
-        else {
-
-            contenu.style.display =
-                "none";
-
-            erreur.style.display =
-                "block";
-
-        }
-
-    </script>
 
 </body>
+
 </html>
