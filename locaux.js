@@ -4,7 +4,7 @@
 // intervention: "https://externe.optimatracabilite.gsf.fr/public/pleaze/418?token=8b0227a578fba9afb075b810b745d033",
 // planning: "pdf/Interventions_bureaux_reunion_r1.pdf"
 
-const locaux = {
+const LOCAUX = {
 
   // =====================================================
   // RDC - 8 locaux
