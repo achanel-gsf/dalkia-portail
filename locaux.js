@@ -4,334 +4,296 @@
 // intervention: "https://externe.optimatracabilite.gsf.fr/public/pleaze/418?token=8b0227a578fba9afb075b810b745d033",
 // planning: "pdf/Interventions_bureaux_reunion_r1.pdf"
 
-const LOCAUX = {
+const locaux = {
 
-  // =====================================================
-  // RDC - 8 locaux
-  // =====================================================
+  // ==================================================
+  // RDC - 8 LOCAUX
+  // ==================================================
 
   "kaly-rdc-sanitaires-nord": {
     nom: "Sanitaires Nord",
     etage: "RDC",
-    site: "Kaly",
-    optima: "https://A-MODIFIER-OPTIMA/sanitaires-nord-rdc",
-    planning: "https://A-MODIFIER-PLANNING/sanitaires-nord-rdc.pdf"
+    intervention: "https://optima.example.com/A_MODIFIER",
+    planning: "plannings/A_MODIFIER-rdc-sanitaires-nord.pdf"
   },
 
   "kaly-rdc-sanitaires-sud": {
     nom: "Sanitaires Sud",
     etage: "RDC",
-    site: "Kaly",
-    optima: "https://A-MODIFIER-OPTIMA/sanitaires-sud-rdc",
-    planning: "https://A-MODIFIER-PLANNING/sanitaires-sud-rdc.pdf"
+    intervention: "https://optima.example.com/A_MODIFIER",
+    planning: "plannings/A_MODIFIER-rdc-sanitaires-sud.pdf"
   },
 
   "kaly-rdc-sanitaires-est": {
     nom: "Sanitaires Est",
     etage: "RDC",
-    site: "Kaly",
-    optima: "https://A-MODIFIER-OPTIMA/sanitaires-est-rdc",
-    planning: "https://A-MODIFIER-PLANNING/sanitaires-est-rdc.pdf"
+    intervention: "https://optima.example.com/A_MODIFIER",
+    planning: "plannings/A_MODIFIER-rdc-sanitaires-est.pdf"
   },
 
   "kaly-rdc-bureaux": {
     nom: "Bureaux",
     etage: "RDC",
-    site: "Kaly",
-    optima: "https://A-MODIFIER-OPTIMA/bureaux-rdc",
-    planning: "https://A-MODIFIER-PLANNING/bureaux-rdc.pdf"
+    intervention: "https://optima.example.com/A_MODIFIER",
+    planning: "plannings/A_MODIFIER-rdc-bureaux.pdf"
   },
 
   "kaly-rdc-hall-accueil": {
     nom: "Hall Accueil",
     etage: "RDC",
-    site: "Kaly",
-    optima: "https://A-MODIFIER-OPTIMA/hall-accueil-rdc",
-    planning: "https://A-MODIFIER-PLANNING/hall-accueil-rdc.pdf"
+    intervention: "https://optima.example.com/A_MODIFIER",
+    planning: "plannings/A_MODIFIER-rdc-hall-accueil.pdf"
   },
 
   "kaly-rdc-magasin": {
     nom: "Magasin",
     etage: "RDC",
-    site: "Kaly",
-    optima: "https://A-MODIFIER-OPTIMA/magasin-rdc",
-    planning: "https://A-MODIFIER-PLANNING/magasin-rdc.pdf"
+    intervention: "https://optima.example.com/A_MODIFIER",
+    planning: "plannings/A_MODIFIER-rdc-magasin.pdf"
   },
 
   "kaly-rdc-sdr-acacia": {
-    nom: "SDR Acacia",
+    nom: "Salle de réunion Acacia",
     etage: "RDC",
-    site: "Kaly",
-    optima: "https://A-MODIFIER-OPTIMA/sdr-acacia-rdc",
-    planning: "https://A-MODIFIER-PLANNING/sdr-acacia-rdc.pdf"
+    intervention: "https://optima.example.com/A_MODIFIER",
+    planning: "plannings/A_MODIFIER-rdc-sdr-acacia.pdf"
   },
 
   "kaly-rdc-sdr-albizia": {
-    nom: "SDR Albizia",
+    nom: "Salle de réunion Albizia",
     etage: "RDC",
-    site: "Kaly",
-    optima: "https://A-MODIFIER-OPTIMA/sdr-albizia-rdc",
-    planning: "https://A-MODIFIER-PLANNING/sdr-albizia-rdc.pdf"
+    intervention: "https://optima.example.com/A_MODIFIER",
+    planning: "plannings/A_MODIFIER-rdc-sdr-albizia.pdf"
   },
 
 
-  // =====================================================
-  // R+1 - 8 locaux
-  // =====================================================
+  // ==================================================
+  // R+1 - 8 LOCAUX
+  // ==================================================
 
   "kaly-r1-sanitaires-nord": {
     nom: "Sanitaires Nord",
     etage: "R+1",
-    site: "Kaly",
-    optima: "https://A-MODIFIER-OPTIMA/sanitaires-nord-r1",
-    planning: "https://A-MODIFIER-PLANNING/sanitaires-nord-r1.pdf"
+    intervention: "https://optima.example.com/A_MODIFIER",
+    planning: "plannings/A_MODIFIER-r1-sanitaires-nord.pdf"
   },
 
   "kaly-r1-sanitaires-sud": {
     nom: "Sanitaires Sud",
     etage: "R+1",
-    site: "Kaly",
-    optima: "https://A-MODIFIER-OPTIMA/sanitaires-sud-r1",
-    planning: "https://A-MODIFIER-PLANNING/sanitaires-sud-r1.pdf"
+    intervention: "https://optima.example.com/A_MODIFIER",
+    planning: "plannings/A_MODIFIER-r1-sanitaires-sud.pdf"
   },
 
   "kaly-r1-sanitaires-est": {
     nom: "Sanitaires Est",
     etage: "R+1",
-    site: "Kaly",
-    optima: "https://A-MODIFIER-OPTIMA/sanitaires-est-r1",
-    planning: "https://A-MODIFIER-PLANNING/sanitaires-est-r1.pdf"
+    intervention: "https://optima.example.com/A_MODIFIER",
+    planning: "plannings/A_MODIFIER-r1-sanitaires-est.pdf"
   },
 
   "kaly-r1-place-village": {
     nom: "Place du Village",
     etage: "R+1",
-    site: "Kaly",
-    optima: "https://A-MODIFIER-OPTIMA/place-village-r1",
-    planning: "https://A-MODIFIER-PLANNING/place-village-r1.pdf"
+    intervention: "https://optima.example.com/A_MODIFIER",
+    planning: "plannings/A_MODIFIER-r1-place-village.pdf"
   },
 
   "kaly-r1-circulations": {
     nom: "Circulations",
     etage: "R+1",
-    site: "Kaly",
-    optima: "https://A-MODIFIER-OPTIMA/circulations-r1",
-    planning: "https://A-MODIFIER-PLANNING/circulations-r1.pdf"
+    intervention: "https://optima.example.com/A_MODIFIER",
+    planning: "plannings/A_MODIFIER-r1-circulations.pdf"
   },
 
   "kaly-r1-bureaux-nord": {
     nom: "Bureaux Nord",
     etage: "R+1",
-    site: "Kaly",
-    optima: "https://A-MODIFIER-OPTIMA/bureaux-nord-r1",
-    planning: "https://A-MODIFIER-PLANNING/bureaux-nord-r1.pdf"
+    intervention: "https://optima.example.com/A_MODIFIER",
+    planning: "plannings/A_MODIFIER-r1-bureaux-nord.pdf"
   },
 
   "kaly-r1-bureaux-sud": {
     nom: "Bureaux Sud",
     etage: "R+1",
-    site: "Kaly",
-    optima: "https://A-MODIFIER-OPTIMA/bureaux-sud-r1",
-    planning: "https://A-MODIFIER-PLANNING/bureaux-sud-r1.pdf"
+    intervention: "https://optima.example.com/A_MODIFIER",
+    planning: "plannings/A_MODIFIER-r1-bureaux-sud.pdf"
   },
 
   "kaly-r1-sdr-cedre": {
-    nom: "SDR Cèdre",
+    nom: "Salle de réunion Cèdre",
     etage: "R+1",
-    site: "Kaly",
-    optima: "https://A-MODIFIER-OPTIMA/sdr-cedre-r1",
-    planning: "https://A-MODIFIER-PLANNING/sdr-cedre-r1.pdf"
+    intervention: "https://optima.example.com/A_MODIFIER",
+    planning: "plannings/A_MODIFIER-r1-sdr-cedre.pdf"
   },
 
 
-  // =====================================================
-  // R+2 - 7 locaux
-  // =====================================================
+  // ==================================================
+  // R+2 - 7 LOCAUX
+  // ==================================================
 
   "kaly-r2-sanitaires-nord": {
     nom: "Sanitaires Nord",
     etage: "R+2",
-    site: "Kaly",
-    optima: "https://A-MODIFIER-OPTIMA/sanitaires-nord-r2",
-    planning: "https://A-MODIFIER-PLANNING/sanitaires-nord-r2.pdf"
+    intervention: "https://optima.example.com/A_MODIFIER",
+    planning: "plannings/A_MODIFIER-r2-sanitaires-nord.pdf"
   },
 
   "kaly-r2-sanitaires-sud": {
     nom: "Sanitaires Sud",
     etage: "R+2",
-    site: "Kaly",
-    optima: "https://A-MODIFIER-OPTIMA/sanitaires-sud-r2",
-    planning: "https://A-MODIFIER-PLANNING/sanitaires-sud-r2.pdf"
+    intervention: "https://optima.example.com/A_MODIFIER",
+    planning: "plannings/A_MODIFIER-r2-sanitaires-sud.pdf"
   },
 
   "kaly-r2-sanitaires-est": {
     nom: "Sanitaires Est",
     etage: "R+2",
-    site: "Kaly",
-    optima: "https://A-MODIFIER-OPTIMA/sanitaires-est-r2",
-    planning: "https://A-MODIFIER-PLANNING/sanitaires-est-r2.pdf"
+    intervention: "https://optima.example.com/A_MODIFIER",
+    planning: "plannings/A_MODIFIER-r2-sanitaires-est.pdf"
   },
 
   "kaly-r2-circulations": {
     nom: "Circulations",
     etage: "R+2",
-    site: "Kaly",
-    optima: "https://A-MODIFIER-OPTIMA/circulations-r2",
-    planning: "https://A-MODIFIER-PLANNING/circulations-r2.pdf"
+    intervention: "https://optima.example.com/A_MODIFIER",
+    planning: "plannings/A_MODIFIER-r2-circulations.pdf"
   },
 
   "kaly-r2-bureaux-nord": {
     nom: "Bureaux Nord",
     etage: "R+2",
-    site: "Kaly",
-    optima: "https://A-MODIFIER-OPTIMA/bureaux-nord-r2",
-    planning: "https://A-MODIFIER-PLANNING/bureaux-nord-r2.pdf"
+    intervention: "https://optima.example.com/A_MODIFIER",
+    planning: "plannings/A_MODIFIER-r2-bureaux-nord.pdf"
   },
 
   "kaly-r2-bureaux-sud": {
     nom: "Bureaux Sud",
     etage: "R+2",
-    site: "Kaly",
-    optima: "https://A-MODIFIER-OPTIMA/bureaux-sud-r2",
-    planning: "https://A-MODIFIER-PLANNING/bureaux-sud-r2.pdf"
+    intervention: "https://optima.example.com/A_MODIFIER",
+    planning: "plannings/A_MODIFIER-r2-bureaux-sud.pdf"
   },
 
   "kaly-r2-sdr-erable": {
-    nom: "SDR Erable",
+    nom: "Salle de réunion Érable",
     etage: "R+2",
-    site: "Kaly",
-    optima: "https://A-MODIFIER-OPTIMA/sdr-erable-r2",
-    planning: "https://A-MODIFIER-PLANNING/sdr-erable-r2.pdf"
+    intervention: "https://optima.example.com/A_MODIFIER",
+    planning: "plannings/A_MODIFIER-r2-sdr-erable.pdf"
   },
 
 
-  // =====================================================
-  // R+3 - 9 locaux
-  // =====================================================
+  // ==================================================
+  // R+3 - 9 LOCAUX
+  // ==================================================
 
   "kaly-r3-sanitaires-nord": {
     nom: "Sanitaires Nord",
     etage: "R+3",
-    site: "Kaly",
-    optima: "https://A-MODIFIER-OPTIMA/sanitaires-nord-r3",
-    planning: "https://A-MODIFIER-PLANNING/sanitaires-nord-r3.pdf"
+    intervention: "https://optima.example.com/A_MODIFIER",
+    planning: "plannings/A_MODIFIER-r3-sanitaires-nord.pdf"
   },
 
   "kaly-r3-sanitaires-sud": {
     nom: "Sanitaires Sud",
     etage: "R+3",
-    site: "Kaly",
-    optima: "https://A-MODIFIER-OPTIMA/sanitaires-sud-r3",
-    planning: "https://A-MODIFIER-PLANNING/sanitaires-sud-r3.pdf"
+    intervention: "https://optima.example.com/A_MODIFIER",
+    planning: "plannings/A_MODIFIER-r3-sanitaires-sud.pdf"
   },
 
   "kaly-r3-sanitaires-est": {
     nom: "Sanitaires Est",
     etage: "R+3",
-    site: "Kaly",
-    optima: "https://A-MODIFIER-OPTIMA/sanitaires-est-r3",
-    planning: "https://A-MODIFIER-PLANNING/sanitaires-est-r3.pdf"
+    intervention: "https://optima.example.com/A_MODIFIER",
+    planning: "plannings/A_MODIFIER-r3-sanitaires-est.pdf"
   },
 
   "kaly-r3-circulations": {
     nom: "Circulations",
     etage: "R+3",
-    site: "Kaly",
-    optima: "https://A-MODIFIER-OPTIMA/circulations-r3",
-    planning: "https://A-MODIFIER-PLANNING/circulations-r3.pdf"
+    intervention: "https://optima.example.com/A_MODIFIER",
+    planning: "plannings/A_MODIFIER-r3-circulations.pdf"
   },
 
   "kaly-r3-bureaux-nord": {
     nom: "Bureaux Nord",
     etage: "R+3",
-    site: "Kaly",
-    optima: "https://A-MODIFIER-OPTIMA/bureaux-nord-r3",
-    planning: "https://A-MODIFIER-PLANNING/bureaux-nord-r3.pdf"
+    intervention: "https://optima.example.com/A_MODIFIER",
+    planning: "plannings/A_MODIFIER-r3-bureaux-nord.pdf"
   },
 
   "kaly-r3-bureaux-sud": {
     nom: "Bureaux Sud",
     etage: "R+3",
-    site: "Kaly",
-    optima: "https://A-MODIFIER-OPTIMA/bureaux-sud-r3",
-    planning: "https://A-MODIFIER-PLANNING/bureaux-sud-r3.pdf"
+    intervention: "https://optima.example.com/A_MODIFIER",
+    planning: "plannings/A_MODIFIER-r3-bureaux-sud.pdf"
   },
 
   "kaly-r3-sdr-orme": {
-    nom: "SDR Orme",
+    nom: "Salle de réunion Orme",
     etage: "R+3",
-    site: "Kaly",
-    optima: "https://A-MODIFIER-OPTIMA/sdr-orme-r3",
-    planning: "https://A-MODIFIER-PLANNING/sdr-orme-r3.pdf"
+    intervention: "https://optima.example.com/A_MODIFIER",
+    planning: "plannings/A_MODIFIER-r3-sdr-orme.pdf"
   },
 
   "kaly-r3-sdr-paletuvier": {
-    nom: "SDR Palétuvier",
+    nom: "Salle de réunion Palétuvier",
     etage: "R+3",
-    site: "Kaly",
-    optima: "https://A-MODIFIER-OPTIMA/sdr-paletuvier-r3",
-    planning: "https://A-MODIFIER-PLANNING/sdr-paletuvier-r3.pdf"
+    intervention: "https://optima.example.com/A_MODIFIER",
+    planning: "plannings/A_MODIFIER-r3-sdr-paletuvier.pdf"
   },
 
   "kaly-r3-sdr-pin-parasol": {
-    nom: "SDR Pin parasol",
+    nom: "Salle de réunion Pin parasol",
     etage: "R+3",
-    site: "Kaly",
-    optima: "https://A-MODIFIER-OPTIMA/sdr-pin-parasol-r3",
-    planning: "https://A-MODIFIER-PLANNING/sdr-pin-parasol-r3.pdf"
+    intervention: "https://optima.example.com/A_MODIFIER",
+    planning: "plannings/A_MODIFIER-r3-sdr-pin-parasol.pdf"
   },
 
 
-  // =====================================================
-  // R+4 - 6 locaux
-  // =====================================================
+  // ==================================================
+  // R+4 - 6 LOCAUX
+  // ==================================================
 
   "kaly-r4-sanitaires-sud": {
     nom: "Sanitaires Sud",
     etage: "R+4",
-    site: "Kaly",
-    optima: "https://A-MODIFIER-OPTIMA/sanitaires-sud-r4",
-    planning: "https://A-MODIFIER-PLANNING/sanitaires-sud-r4.pdf"
+    intervention: "https://optima.example.com/A_MODIFIER",
+    planning: "plannings/A_MODIFIER-r4-sanitaires-sud.pdf"
   },
 
   "kaly-r4-sanitaires-est": {
     nom: "Sanitaires Est",
     etage: "R+4",
-    site: "Kaly",
-    optima: "https://A-MODIFIER-OPTIMA/sanitaires-est-r4",
-    planning: "https://A-MODIFIER-PLANNING/sanitaires-est-r4.pdf"
+    intervention: "https://optima.example.com/A_MODIFIER",
+    planning: "plannings/A_MODIFIER-r4-sanitaires-est.pdf"
   },
 
   "kaly-r4-circulations": {
     nom: "Circulations",
     etage: "R+4",
-    site: "Kaly",
-    optima: "https://A-MODIFIER-OPTIMA/circulations-r4",
-    planning: "https://A-MODIFIER-PLANNING/circulations-r4.pdf"
+    intervention: "https://optima.example.com/A_MODIFIER",
+    planning: "plannings/A_MODIFIER-r4-circulations.pdf"
   },
 
   "kaly-r4-bureaux-nord": {
     nom: "Bureaux Nord",
     etage: "R+4",
-    site: "Kaly",
-    optima: "https://A-MODIFIER-OPTIMA/bureaux-nord-r4",
-    planning: "https://A-MODIFIER-PLANNING/bureaux-nord-r4.pdf"
+    intervention: "https://optima.example.com/A_MODIFIER",
+    planning: "plannings/A_MODIFIER-r4-bureaux-nord.pdf"
   },
 
   "kaly-r4-bureaux-sud": {
     nom: "Bureaux Sud",
     etage: "R+4",
-    site: "Kaly",
-    optima: "https://A-MODIFIER-OPTIMA/bureaux-sud-r4",
-    planning: "https://A-MODIFIER-PLANNING/bureaux-sud-r4.pdf"
+    intervention: "https://optima.example.com/A_MODIFIER",
+    planning: "plannings/A_MODIFIER-r4-bureaux-sud.pdf"
   },
 
   "kaly-r4-sdr-sequoia": {
-    nom: "SDR Sequoia",
+    nom: "Salle de réunion Sequoia",
     etage: "R+4",
-    site: "Kaly",
-    optima: "https://A-MODIFIER-OPTIMA/sdr-sequoia-r4",
-    planning: "https://A-MODIFIER-PLANNING/sdr-sequoia-r4.pdf"
+    intervention: "https://optima.example.com/A_MODIFIER",
+    planning: "plannings/A_MODIFIER-r4-sdr-sequoia.pdf"
   }
 
 };
